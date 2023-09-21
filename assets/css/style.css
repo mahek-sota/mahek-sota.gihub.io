@@ -44,6 +44,7 @@ img {
     background-color: var(--color-base);
 }
 
+
 .full-height {
     min-height: 100vh;
     height: 100%;
@@ -167,15 +168,15 @@ img {
 }
 
 /* SOCIAL ICONS */
-?
+
 
 .social-icons a {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-base);
+    /* background-color: var(--color-base); */
     border-radius: 100px;
     font-size: 24px;
 }
@@ -262,7 +263,7 @@ img {
     .navbar {
         min-height: 100vh;
         width: var(--sidbar-width);
-        background: linear-gradient(rgba(92, 148, 110, 0.5), rgba(92, 148, 110, 0.5)), url(../images/img-2.jpg);
+        background: linear-gradient(rgba(92, 148, 110, 0.5), rgba(92, 148, 110, 0.5)), url(../images/img-3.jpg);
         background-size: cover;
         background-position: center;
     }
