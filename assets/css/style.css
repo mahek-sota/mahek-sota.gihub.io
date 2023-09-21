@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
 
 :root {
-    --color-body: #CAD8DE;
-    --color-heading: #eef3db;
-    --color-base: #033f47;
-    --color-base2: #022a30;
-    --color-brand: #00f6ed;
-    --color-brand2: #645853;
+    --color-body: #D2D4C8;
+    --color-heading: #E0E2DB;
+    --color-base: #477155;
+    --color-base2: #000000;
+    --color-brand: #8B2635;
+    --color-brand2: #D3EFBD;
     --sidbar-width: 240px;
     --font-base: "Joan";
 }
@@ -92,14 +92,30 @@ img {
 .navbar .nav-link.active {
     color: var(--color-brand);
 }
+@media (max-width: 991px){
+    .visible{
+        width: 10%;
+        border: 2px solid var(--color-brand);
+        border-radius: 100%;
+    }
+    .flex-img-cont{
+        display: flex;
+        align-items: center;
+    }
+}
 
+/* Add your existing CSS for larger screens here */
 @media (min-width: 992px) {
     .navbar {
         min-height: 100vh;
         width: var(--sidbar-width);
-        background: linear-gradient(rgba(3, 63, 71, 0.8), rgba(3, 63, 71, 0.8)), url(../images/sidebar-img.jpg);
+        background: linear-gradient(rgba(92, 148, 110, 0.5), rgba(92, 148, 110, 0.5)), url(../images/img-2.jpg);
         background-size: cover;
         background-position: center;
+    }
+
+    .visible{
+        display: none;
     }
 
     .navbar-brand img {
@@ -111,6 +127,8 @@ img {
         padding-left: var(--sidbar-width);
     }
 }
+
+
 
 /* BTN */
 .btn {
