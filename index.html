@@ -22,10 +22,12 @@
                     <span><img src="./assets/images/person.jpg" class="visible" ></span><span class="h3 fw-bold d-block d-lg-none">Mahek Sota</span>
                     <img src="./assets/images/person.jpg" class="d-none d-lg-block rounded-circle" alt="">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <!-- HTML: Add an ID to your navbar toggler button -->
+                <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
                 </button>
+
             </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
@@ -44,6 +46,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#more">Behind the scenes!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.linkedin.com/in/mahek-sota/" style="cursor: pointer">Let's Connect!</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="download-link" style="cursor: pointer">Click Me!</a>
@@ -131,7 +136,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row gy-4">
+            <div class="row gy-4" >
                 <div class="col-md-6" data-aos="fade-up">
                     <div class="card-custom rounded-4 bg-base shadow-effect">
                         <div class="card-custom-image rounded-4">
@@ -800,9 +805,21 @@
                 }
             });
 
+            // JavaScript: Add an event listener to close the navbar when clicking outside
+            document.addEventListener('click', function (event) {
+                var navbarToggler = document.getElementById('navbar-toggler');
+                var navbarNav = document.getElementById('navbarNav');
+
+                // Check if the click target is not the navbar toggler button or the navbar itself
+                if (!navbarToggler.contains(event.target) && !navbarNav.contains(event.target)) {
+                    // If the click is outside, close the navbar
+                    var bootstrapNavbar = new bootstrap.Collapse(navbarNav);
+                    bootstrapNavbar.hide();
+    }
+});
+
 
         </script>
         
     </body>
 </html>
-
